@@ -1,0 +1,87 @@
+{
+  "services": [
+    {
+      "name": "Mobile/Web",
+      "type": "client",
+      "area": "Frontend",
+      "group": "Frontend Team",
+      "components": ["Login UI", "Transfer UI", "Accounts UI", "Loans UI"]
+    },
+    {
+      "name": "API Gateway",
+      "type": "gateway",
+      "area": "Backend",
+      "group": "Backend Team",
+      "components": ["API Routing", "Request Handling"]
+    },
+    {
+      "name": "Keycloak",
+      "type": "authentication",
+      "area": "Authentication",
+      "group": "Identity Team",
+      "components": ["Login", "OTP", "Sessions"]
+    },
+    {
+      "name": "Accounts",
+      "type": "service",
+      "area": "Accounts",
+      "group": "Accounts Team",
+      "components": ["Account Information", "Balance"]
+    },
+    {
+      "name": "Payments",
+      "type": "service",
+      "area": "Payments",
+      "group": "Payments Team",
+      "components": ["Payment Processing", "Payment Status"]
+    },
+    {
+      "name": "Loans",
+      "type": "service",
+      "area": "Loans",
+      "group": "Loans Team",
+      "components": ["Loan Application", "Loan Calculation"]
+    },
+    {
+      "name": "Database",
+      "type": "database",
+      "area": "Data",
+      "group": "Backend Team",
+      "components": ["Customer Data", "Transaction Data"]
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "Mobile/Web",
+      "to": "API Gateway"
+    },
+    {
+      "from": "API Gateway",
+      "to": "Keycloak"
+    },
+    {
+      "from": "API Gateway",
+      "to": "Accounts"
+    },
+    {
+      "from": "API Gateway",
+      "to": "Payments"
+    },
+    {
+      "from": "API Gateway",
+      "to": "Loans"
+    },
+    {
+      "from": "Accounts",
+      "to": "Database"
+    },
+    {
+      "from": "Payments",
+      "to": "Database"
+    },
+    {
+      "from": "Loans",
+      "to": "Database"
+    }
+  ]
+}

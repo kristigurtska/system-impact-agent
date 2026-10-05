@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Failure Impact Agent</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Failure Impact Agent</h1>
+        <p>
+            Explore how a service failure can affect a software system.
+        </p>
+    </header>
+
+
+    <section class="question-box">
+
+        <input
+            type="text"
+            id="question"
+            placeholder="What happens if Payments goes down?"
+        >
+
+        <button id="analyzeButton">
+            Analyze
+        </button>
+
+    </section>
+
+
+
+
+    <section class="architecture">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="eyebrow">SYSTEM MAP</span>
+                <h2>System Architecture</h2>
+            </div>
+
+        </div>
+
+        <div id="diagram"></div>
+
+    </section>
+
+
+
+    <section class="impact-panel">
+
+        <div class="impact-header">
+
+            <div>
+                <span class="eyebrow">ANALYSIS</span>
+                <h2>Impact Analysis</h2>
+            </div>
+
+            <span class="status-badge" id="statusBadge">
+                READY
+            </span>
+
+        </div>
+
+
+        <div id="impactContent" class="impact-content">
+
+            <div class="empty-state">
+
+                <div class="empty-icon">⌁</div>
+
+                <h3>Ready to analyze</h3>
+
+                <p>
+                    Ask what happens when a service goes down.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
