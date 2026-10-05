@@ -135,7 +135,7 @@ system-impact-agent/
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repository-url>
+git clone  https://github.com/kristigurtska/system-impact-agent
 cd system-impact-agent
 ```
 
